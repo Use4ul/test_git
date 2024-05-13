@@ -1,0 +1,42 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Пример API",
+        "description": "Это пример API для демонстрации Swagger.",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3000",
+            "description": "Локальный сервер"
+        }
+    ],
+    "paths": {
+        "/api/users": {
+            "get": {
+                "summary": "Получить список пользователей",
+                "responses": {
+                    "200": {
+                        "description": "Успешный запрос",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "users": [
+                                        {
+                                            "id": 1,
+                                            "name": "Пользователь 1"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "name": "Пользователь 2"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
